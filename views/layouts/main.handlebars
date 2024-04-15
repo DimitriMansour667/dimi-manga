@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>{{#ifDev}}DEV {{/ifDev}}Adolla</title>
-		<link rel="apple-touch-icon" href="{{getIconSrc}}">
-
-
+		<title>{{#ifDev}}DEV {{/ifDev}}DIMI-MANGA</title>
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="mobile-web-app-capable" content="yes">
@@ -14,26 +11,10 @@
 		<link rel="stylesheet" href="/css/main.css">
 		<link type="application/opensearchdescription+xml" rel="search" href="/osdd.xml"/>
 		
-		<meta name="description" content="Adolla is a manga reader for the web, developed by Jip Fr (https://jipfr.nl)">
-		<meta property="og:description" content="Adolla is a manga reader for the web, developed by Jip Fr (https://jipfr.nl)">
-		<meta name="twitter:description" content="Adolla is a manga reader for the web, developed by Jip Fr (https://jipfr.nl)">
-		
-		<link rel="icon" href="/icon.png">
-		<meta property="og:image" content="/icon.png">
-		<meta name="twitter:image:src" content="/icon.png">
-		<meta name="twitter:card" content="summary">
-		
 		<meta name="keywords" content="online palette storage">
 		<meta name="theme-color" content="{{getThemeColor}}">
 		
-		<meta property="og:title" content="{{#ifDev}}DEV {{/ifDev}}Adolla">
-		
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimal-ui, viewport-fit=cover">
-		
-		<meta name="twitter:title" content="{{#ifDev}}DEV {{/ifDev}}Adolla">
-
-		<link href="/splash-screen/ios-splash-828.png" media="(device-width: 414px)" rel="apple-touch-startup-image">
-		<link href="/splash-screen/ios-splash-1242.png" media="(device-width: 621px)" rel="apple-touch-startup-image">
 
 	</head>
 	<body data-to-page="{{getPageProgress navigation.currentChapter.progress}}" data-page-count="{{navigation.currentChapter.progress.total}}" {{#ifDev}}data-is-dev="true"{{/ifDev}}>
