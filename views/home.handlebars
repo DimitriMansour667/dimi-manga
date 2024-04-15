@@ -1,0 +1,38 @@
+<div class="content-inner" data-vapid-public="{{publicVapidKey}}">
+
+	<h1 class="title">DIMI-MANGA</h1>
+	<h1> </h1>
+	{{#if reading}}
+	<section class="section continue-reading" data-list-id="continue-reading" data-list-type="list">
+		<h2 class="sub-title spread do-spread"><span>Continue reading</span> {{> list-type }}</h2>
+		<div class="manga-grid show-all-wrapper do-show-all">
+			
+			{{#each reading}}
+			{{> manga-card manga=this toChapter=true}}
+			{{/each}}
+
+			<button class="show-all">Show <span class="more-count"></span> more</button>
+
+		</div>
+	</section>
+	{{/if}}
+	{{#each lists}}
+	{{> list list=this}}
+	{{/each}}
+	{{#if popular}}
+	<section class="section popular" data-list-id="popular" data-list-type="list">
+		<h2 class="sub-title spread do-spread"><span>Popular right now</span> {{> list-type }}</h2>
+		<div class="manga-grid">
+		{{#each popular}}
+			{{>manga-card manga=this}}
+		{{/each}}
+		</div>
+	</section>
+	{{/if}}
+
+</div>
+
+<script src="/js_compiled/notifs.js"></script>
+<script src="/js_compiled/pages/home.js"></script>
+<script src="/js_compiled/reusable/lists.js"></script>
+<script src="/js_compiled/reusable/list-type.js"></script>
